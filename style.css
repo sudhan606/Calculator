@@ -14,6 +14,9 @@ body
 }
 h1{
     color: azure;
+    font-family: "Comic Neue", cursive;
+    font-size: 3rem;
+    font-weight: 700;
 }
 .main{
     height: 24rem;
@@ -48,6 +51,8 @@ button{
     font-family: "Comic Neue", cursive;
     font-weight: 700;
     font-style: normal;
+    text-wrap: wrap;
+    
 }
 .button{
     height:80% ;
@@ -59,22 +64,27 @@ button{
 }
 .num{
     font-size: 1.5rem;
-}
-.num,.sign{
     border-radius: 50%;
 }
 .sign{
     color: #ec7263;
     font-size: 1.7rem;
+    border-radius: 50%;
 }
 .equal{
     grid-row: 3/6;
     grid-column: 4;
     border-radius: 30px;
-    background-color: #ff9a3c;
+    background-color: rgba(255, 154, 60, 0.751);
 }
-.AC{
+#del{
+    color: #ec7263;
+}
+#AC{
     color: black;
-    background-color: rgba(255, 154, 60, 0.863);
+    background-color: rgba(255, 154, 60, 0.751);
+}
+button:active{
+    color:#ff9a3c ;
 }
 
