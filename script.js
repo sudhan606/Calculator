@@ -3,23 +3,41 @@ let display=document.querySelector(".display");
 let turn=1;
 let count=0;
 let x="",string;
-let num1,num2,sign;
+let result=0;
+let num1="",num2="",sign="";
 console.log(button[0].classList.value);
 const numcheck=()=>{
     console.log("equal");
     for(let i=0;i<display.innerText.length;i++){
-        if(isNaN(display.innerText[i])){
-            count++;
-            if(count==2)
-            break;
-            sign=display.innerText[i];
-        }
-        else{
-           count=0;
+        if(display.innerText[i]>=0&&display.innerText[i]<=9||display.innerText[i]=="."){
+            //count++;
+           // if(count==2)
+           // break;
+           if(count==0)
+           num1+=display.innerText[i];
+            else
+            num2+=display.innerText[i];
             
         }
-        console.log(display.innerText[i]);
+        else{
+            sign=display.innerText[i];
+            count++;
+        }
     }
+    console.log(parseFloat(num1),parseFloat(num2),sign)
+    calculate(parseFloat(num1),parseFloat(num2),sign);
+}
+const calculate=(num1,num2,sign)=>{
+    if(sign==="+")
+    result=num1+num2;
+    else if(sign==="-")
+    result=num1-num2;
+    else if(sign==="*")
+    result=num1*num2;
+    else if(sign==="/")
+    result=num1/num2;
+    console.log(result);
+
 }
 button.forEach((op)=>{
     op.addEventListener("click",()=>{
@@ -47,22 +65,20 @@ button.forEach((op)=>{
         }
         else if(op.getAttribute("id")==="AC")
         {
-            display.innerText="";
+            display.innerText="0";
             x="";
+            count=0;
+            num1="",num2="",sign="";
         }
         else if(op.getAttribute("class")==="equal"){
             numcheck();
+            x=result;
         }
         else if(op.getAttribute("id")!=="AC")
         x+=op.innerText;
         display.innerText=x;
-        console.log(x);
-
     })
-    string=display.innerText;
-    for(let i=0;i<display.innerText.length;i++){
-        console.log(display.innerText[1]);
-    }
+
     
 
 })

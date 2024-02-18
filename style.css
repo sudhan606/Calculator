@@ -84,6 +84,9 @@ button{
     color: black;
     background-color: rgba(255, 154, 60, 0.751);
 }
+button:hover{
+    cursor: pointer;
+}
 button:active{
     color:#ff9a3c ;
 }
