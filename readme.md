@@ -23,7 +23,7 @@ To run this calculator locally, simply clone this repository to your local machi
 
 ## Usage
 Enter numbers and perform operations using the buttons provided.
-Click the "C" button to clear the calculator.
+Click the "AC" button to clear the calculator.
 Enjoy calculating!
 
 ## Contributing
