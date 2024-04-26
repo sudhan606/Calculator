@@ -63,8 +63,9 @@ button.forEach((op)=>{
         }
         else if( op.getAttribute("id")==="del")
         {
-            if(x===Infinity||isNaN(x))
+            if( x==="Math Error")
             x="";
+            else
             x=display.innerText.substring(0, display.innerText.length-1);
         }
         else if(op.getAttribute("id")==="AC")
@@ -79,8 +80,6 @@ button.forEach((op)=>{
             x="Math Error";
         }
         else if(op.getAttribute("id")!=="AC")
-        if(x===Infinity||isNaN(x))
-        display.innerText="";
         x+=op.innerText;
         display.innerText=x;
         //console.log(x);
