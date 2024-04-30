@@ -5,7 +5,7 @@ let count=0;
 let x="",string;
 let result=0;
 let num1="",num2="",sign="";
-console.log(button[0].classList.value);
+//console.log(button[0].classList.value);
 /*const numcheck=()=>{
     console.log("equal");
     for(let i=0;i<display.innerText.length;i++){
@@ -71,7 +71,6 @@ button.forEach((op)=>{
         else if(op.getAttribute("id")==="AC")
         {
             x="";
-            console.log(x);
         }
         else if(op.getAttribute("class")==="equal"){
             //numcheck();
